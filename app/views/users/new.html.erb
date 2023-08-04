@@ -1,4 +1,4 @@
-<h1>Sign up</h1>
+<h1 class="shadow p-3 mb-5 bg-white rounded display-1">Sign up</h1>
 
 <% if @user.errors.any? %>
   <div id="error_explanation">
@@ -13,16 +13,16 @@
 
 <%= form_with(model: @user, local: true) do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class: "form-control form-control-lg col-sm-4" %>
 
   <%= f.label :email %>
-  <%= f.email_field :email %>
+  <%= f.email_field :email, class: "form-control form-control-lg col-sm-4" %>
 
   <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password, class: "form-control form-control-lg col-sm-4"%>
 
   <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: "form-control form-control-lg col-sm-4" %>
 
   <%= f.submit "Create my account" %>
 <% end %>
